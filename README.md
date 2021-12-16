@@ -41,7 +41,9 @@ func (c *Counter) Get(key string) int {
 }
 
 func main() {
-	c := Counter{v: make(map[string]int)}
+	c := Counter{
+		v: make(map[string]int),
+	}
 	for i := 0; i < 100; i++ {
 		go c.Increment("example")
 	}
