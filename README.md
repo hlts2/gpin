@@ -53,3 +53,16 @@ func main() {
 }
 
 ```
+
+## Benchmark
+
+```
+goos: linux
+goarch: amd64
+pkg: github.com/hlts2/gpin
+cpu: 11th Gen Intel(R) Core(TM) i9-11900K @ 3.50GHz
+BenchmarkMutex
+BenchmarkMutex-16       	10193804	       135.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkSpinlock
+BenchmarkSpinlock-16    	43065172	        30.98 ns/op	       0 B/op	       0 allocs/op
+```
